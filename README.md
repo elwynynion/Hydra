@@ -1,8 +1,9 @@
 # Hydra
 
-Hydra Jekyll Theme - Simple and Minimalist Jekyll Blog Theme
+Hydra Jekyll Theme - Simple and Minimalist Jekyll Blog Theme. Hydra is redesigned theme from [Ephesus](https://github.com/onepase/Ephesus).
 
-Author [Elwyn Ynion](https://github.com/elwynynion).
+
+Author [Elwyn Ynion](https://github.com/elwynynion).<br>
 Inspired by [Hakan Torun](https://hakan.io).
 
 - **Demo:** https://elwynynion.github.io/

@@ -1,0 +1,37 @@
+{% include header.html %}
+<div class="wyn-container mt-5 mb-5">
+    <div class="text-center">
+		<a href="./"><img src="{{site.author.picture}}" class="img-profile" alt=""></a><br><br>
+        <h1 class="display3 display-name">{{site.author.name}}</h1>
+		<div class="d-flex justify-content-center">
+			<p class="lead-bio w-50">{{ site.author.bio }} asfasf asfsa fasfassafasfsaf</p>
+		</div>
+        <div class="pb-2">
+			{% if site.author.facebook %}
+            	<a href="https://facebook.com/{{site.author.facebook}}" class="me-1"><img src="assets/images/icon/facebook.svg" class="social-icons" width="26" alt=""></a>
+            {% endif %}
+			{% if site.author.twitter %}
+				<a href="https://twitter.com/{{site.author.twitter}}" class="me-1"><img src="assets/images/icon/twitter.svg" class="social-icons" width="26" alt=""></a>
+            {% endif %}
+			{% if site.author.instagram %}
+				<a href="https://instagram.com/{{site.author.instagram}}" class="me-1"><img src="assets/images/icon/instagram.svg" class="social-icons" width="26" alt=""></a>
+            {% endif %}
+			{% if site.author.youtube %}
+				<a href="{{site.author.youtube}}" class="me-1"><img src="assets/images/icon/youtube.svg" class="social-icons" width="26" alt=""></a>
+            {% endif %}
+			{% if site.author.github %}
+				<a href="https://github.com/{{site.author.github}}" class="me-1"><img src="assets/images/icon/github.svg" class="social-icons" width="26" alt=""></a>
+			{% endif %}
+			{% if site.author.linkedin %}
+				<a href="https://linkedin.com/in/{{site.author.linkedin}}" class="me-1"><img src="assets/images/icon/linkedin.svg" class="social-icons" width="26" alt=""></a>
+			{% endif %}
+			<a href="about" class="me-1"><img src="assets/images/icon/user.svg" class="social-icons" width="26" alt=""></a>
+		</div>
+    </div>
+
+	{{content}}
+</div>
+
+    
+</div>
+{% include footer.html %}

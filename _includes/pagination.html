@@ -1,0 +1,23 @@
+<div class="p-3 card-post-end">
+    <div class="d-flex">
+		{% if paginator.previous_page %}
+			{% if paginator.previous_page == 1 %}
+				<a class="prev" href="/">< Previous</a>
+			{% else %}
+				<a class="prev" href="/page/{{ paginator.previous_page }}/">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="socials-icons-share" viewBox="0 0 16 16">
+						<path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+					</svg>
+					Previous
+				</a>
+			{% endif %}
+		{% endif %}
+        <p class="m-0 small">Page {{paginator.page}} of {{paginator.total_pages}}</p>
+		{% if paginator.next_page %}
+        	<a href="/page/{{ paginator.next_page }}/" class="ms-auto small text-decoration-none link-primary">
+				Next
+				
+			</a>
+		{% endif %}
+    </div>
+</div>

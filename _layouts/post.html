@@ -1,0 +1,65 @@
+---
+layout: post_layout
+---
+
+{% if page.mathjax %}
+
+<script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+{% endif %}
+<div class="wyn-container mt-5 mb-5">
+    <div class="mb-4">
+        <a href="./" class="btn btn-light">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="socials-icons-share" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+              </svg>
+            <span>Back</span>
+        </a>
+    </div>
+    <div class="mb-2 d-flex">
+        <p class="m-0">{{ page.date | date: "%d.%m.%Y" }}</p>
+        <p class="ms-auto">
+            Share: 
+            <a href="https://www.facebook.com/sharer/sharer.php?u={{site.url}}/{{page.slug}}" class="me-1"><img src="assets/images/icon/facebook.svg" class="socials-icons-share" width="26" alt=""></a>
+            <a href="https://twitter.com/intent/tweet?source=tweetbutton&amp;original_referer={{site.url}}/{{page.slug}}&amp;text={{page.title}} - {{site.url}}/{{page.slug}}" class="me-1"><img src="assets/images/icon/twitter.svg" class="socials-icons-share" width="26" alt=""></a>
+            <a href="https://api.whatsapp.com/send?text={{site.url}}/{{page.slug}}" class="me-1"><img src="assets/images/icon/whatsapp.svg" class="socials-icons-share" width="26" alt=""></a>
+        </p>
+    </div>
+    <div class="post-content pb-3">
+        <h1>{{page.title}}</h1>
+		{{ content }}
+	</div>
+
+	<div class="tags-container pb-3">
+		{% for tag in page.tags %}
+			<a href="{{ site.url }}/tags/#{{tag | cgi_escape}}" class="post-tag badge bg-light border p-2 tag-chip">{{tag}}</a>{% unless forloop.last %} {% endunless %}
+		{% endfor %}
+	</div>
+
+    <div class="p-3 card-post-end">
+        <div class="d-flex">
+			{% if page.previous %}
+            	<a href="{{ page.previous | relative_url }}" class="small text-decoration-none link-primary">
+                    <span class="d-inline-block text-truncate" style="max-width: 160px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="align-middle default-icon" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5z"/>
+                        </svg>
+                        {{ page.previous.title }}
+                    </span>
+                </a>
+			{% endif %} {% if page.next %}
+            <a href="{{ page.next | relative_url }}" class="ms-auto small text-decoration-none link-primary">
+                {{ page.next.title }}
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="align-middle default-icon" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                </svg>
+            </a>
+			{% endif %}
+		</div>
+    </div>
+</div>
+{% include disqus.html %}
+
+
+

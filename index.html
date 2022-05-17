@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="mt-4">
+	{% for post in paginator.posts %}
+    <div class="p-3 card-post">
+        <div class="d-flex">
+            <a href="{{ site.url }}{{ post.url }}" class="card-post-link">
+                <div class="title">
+                    <p class="m-0">
+                        {{ post.title }}
+                    </p>
+                </div>
+            </a>
+            <div class="date-post ms-auto">
+                <p class="m-0 text-end"><time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date: "%d.%m.%Y" }}</time></p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    
+    {% include pagination.html %}
+</div>

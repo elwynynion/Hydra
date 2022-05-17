@@ -1,0 +1,83 @@
+# Site settings
+site: Elwyn
+title: Elwyn - Personal Blog
+keywords: elwyn, blog
+description: >-
+  Elwyn - Personal Blog
+lang: en-US
+timezone:  Asia/Manila
+# repo: https://github.com/onepase/Ephesus # site repo [optional]
+google_verify:      XXX # Put your Google Verification here
+google_analytics:   UA-XXXXXXXX-00 # Put your Google Analytics code
+# discus-identifier:  XXX
+
+# Author settings
+author:
+  name: Elwyn
+  bio: Full-stack developer / Figma designer
+  picture: assets/images/profile.png 
+  github: elwynynion # github username
+  # twitter: onepase # twitter username
+  facebook: elwynynion # facebook username
+  instagram: e.lwyn # instagram username
+  # youtube: https://www.youtube.com/channel/UCMmAto-wxBootXN91AzBiDg # youtube username
+  linkedin: elwynynion # linkedin username
+  email: elwynynion2@gmail.com # email adress
+
+
+# URL settings
+url: "https://elwynynion.github.io/" # Domain Name of host. [username].github.io for github pages
+permalink: pretty
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+
+exclude:
+  - .jekyll-cache
+  - .obsidian
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE.md
+  - README.md
+  - CONTRIBUTING.md
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-relative-links
+paginate: 20
+paginate_path: "/page/:num"
+
+collections:
+  pages:
+    output: true
+    permalink: /:name
+  posts:
+    output: true
+    permalink: /:slug
+  
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+relative_links:
+  enabled:     true
+  collections: false

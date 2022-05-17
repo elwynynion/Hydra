@@ -1,0 +1,143 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600&display=swap');
+
+
+$enable-shadows: true;
+$prefix: "wyn-";
+
+// Colors
+$gray-dark: #716c6c;
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #444;
+}
+
+.display-name {
+    font-weight: 700;
+    color: #202124;
+}
+
+.title p {
+    font-weight: 600;
+}
+
+.date-post p {
+    color: $gray-dark;
+    font-weight: 600;
+    font-family: 'Inconsolata', monospace;
+}
+
+.card-post {
+    border: 1.3px solid #d4d4d4;
+    border-radius: 18px;
+    margin-bottom: 15px;
+    transition: all .1s ease-in-out;
+}
+
+.card-post:hover {
+    background: #f8f8f8;
+    
+}
+
+.card-post-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.card-post-link:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+.card-post-end {
+    border: 1.3px dashed #d4d4d4;
+    border-radius: 18px;
+    margin-bottom: 15px;
+}
+
+.img-profile {
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    transition: all .3s ease-in-out;
+}
+
+.img-profile:hover {
+    transform: scale(1.05);
+}
+
+.link-footer {
+    color: inherit;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+.socials-icons-share {
+    width: 1.5em;
+    height: 1.5m;
+    vertical-align: middle;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 17px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.tag-chip {
+    border-radius: 15px;
+    font-weight: 600;
+    color: inherit;
+}
+
+figure {
+    padding: 20px;
+    border-radius: 17px;
+}
+
+.highlight {
+    padding: 14px;
+    border-radius: 17px;
+}
+
+pre.highlight {
+    margin-bottom: 0;
+}
+
+.lead-bio {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #202124;
+}
+
+.default-icon {
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+}
+
+
+.wyn-container {
+    max-width: 750px;
+    margin: 12px auto;
+    padding-right: 3vw;
+    padding-left: 3vw;
+    box-sizing: content-box;
+}
+@media screen and (max-width: 768px) {
+    .wyn-container {
+        padding-right: 5vw;
+        padding-left: 5vw;
+        box-sizing: content-box;
+    }
+}

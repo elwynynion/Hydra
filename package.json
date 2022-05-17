@@ -1,0 +1,14 @@
+{
+  "name": "jeykll-elwyn",
+  "version": "1.0.0",
+  "description": "Ephesus Jekyll Theme - Simple and Minimal Jekyll Blog Theme",
+  "main": "index.js",
+  "scripts": {
+    "sass-watch": "sass --watch sass/main.scss assets/css/style.css"
+  },
+  "author": "elwyn",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.0-beta1"
+  }
+}
